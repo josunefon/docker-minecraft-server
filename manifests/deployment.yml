@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "jsfakstest-bf05"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "jsfakstest-bf05"
+    spec:
+      containers:
+        - name: "jsfakstest-bf05"
+          image: "ccojsftestacr.azurecr.io/jsfakstest"
+          ports:
+          - containerPort: 25565
